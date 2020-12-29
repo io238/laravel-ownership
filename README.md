@@ -1,8 +1,8 @@
-# :package_description
+# Single database multi-tenancy for Laravel.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_name/:package_name.svg?label=Version)](https://packagist.org/packages/:vendor_name/:package_name)
-[![GitHub Tests Action Status](https://github.com/:vendor_name/:package_name/workflows/Tests/badge.svg?branch=master)](https://github.com/:vendor_name/:package_name/actions?query=workflow%3ATests+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_name/:package_name.svg?label=Downloads)](https://packagist.org/packages/:vendor_name/:package_name)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/io238/laravel-ownership.svg?label=Version)](https://packagist.org/packages/io238/laravel-ownership)
+[![GitHub Tests Action Status](https://github.com/io238/laravel-ownership/workflows/Tests/badge.svg?branch=master)](https://github.com/io238/laravel-ownership/actions?query=workflow%3ATests+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/io238/laravel-ownership.svg?label=Downloads)](https://packagist.org/packages/io238/laravel-ownership)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
@@ -11,20 +11,20 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require :vendor_name/:package_name
+composer require io238/laravel-ownership
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="Spatie\Skeleton\SkeletonServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Io238\LaravelOwnership\LaravelOwnershipServiceProvider" --tag="migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --provider="Spatie\Skeleton\SkeletonServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Io238\LaravelOwnership\LaravelOwnershipServiceProvider" --tag="config"
 ```
 
 This is the contents of the published config file:
@@ -37,9 +37,9 @@ return [
 ## Usage
 
 ```php
-$skeleton = new Io238\Skeleton();
+$laravel-ownership = new Io238\LaravelOwnership();
 
-echo $skeleton->echoPhrase('Hello World!');
+echo $laravel-ownership->echoPhrase('Hello World!');
 ```
 
 ## Testing
@@ -62,7 +62,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [Martin Migge](https://github.com/io238)
 - [All Contributors](../../contributors)
 
 ## License

@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Skeleton\Commands;
+namespace Io238\LaravelOwnership\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelOwnershipCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-ownership';
 
     public $description = 'My command';
 

@@ -1,16 +1,16 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "io238/laravel-ownership",
+    "description": "Single database multi-tenancy for Laravel.",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "io238",
+        "laravel-ownership"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/io238/laravel-ownership",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Martin Migge",
+            "email": "martin@io238.eu",
             "homepage": "https://spatie.be",
             "role": "Developer"
         }
@@ -25,13 +25,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src",
-            "Spatie\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Io238\\LaravelOwnership\\": "src",
+            "Io238\\LaravelOwnership\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Io238\\LaravelOwnership\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -45,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "Io238\\LaravelOwnership\\LaravelOwnershipServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "LaravelOwnership": "Io238\\LaravelOwnership\\LaravelOwnershipFacade"
             }
         }
     },
