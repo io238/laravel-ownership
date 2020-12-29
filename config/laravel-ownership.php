@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'model' => \Illuminate\Foundation\Auth\User::class,
+    'model' => config('auth.providers.users.model', App\Models\User::class),
 ];
