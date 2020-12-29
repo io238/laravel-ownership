@@ -3,10 +3,10 @@
 namespace Io238\LaravelOwnership;
 
 use Illuminate\Support\ServiceProvider;
-use Io238\LaravelOwnership\Commands\LaravelOwnershipCommand;
 
-class LaravelOwnershipServiceProvider extends ServiceProvider
-{
+
+class LaravelOwnershipServiceProvider extends ServiceProvider {
+
     public function boot()
     {
         if ($this->app->runningInConsole()) {
@@ -19,24 +19,21 @@ class LaravelOwnershipServiceProvider extends ServiceProvider
             ], 'views');
 
             $migrationFileName = 'create_laravel_ownership_table.php';
-            if (! $this->migrationFileExists($migrationFileName)) {
+            if ( ! $this->migrationFileExists($migrationFileName)) {
                 $this->publishes([
                     __DIR__ . "/../database/migrations/{$migrationFileName}.stub" => database_path('migrations/' . date('Y_m_d_His', time()) . '_' . $migrationFileName),
                 ], 'migrations');
             }
-
-            $this->commands([
-                LaravelOwnershipCommand::class,
-            ]);
         }
 
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'laravel-ownership');
     }
+
 
     public function register()
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/laravel-ownership.php', 'laravel-ownership');
     }
+
 
     public static function migrationFileExists(string $migrationFileName): bool
     {
@@ -49,4 +46,5 @@ class LaravelOwnershipServiceProvider extends ServiceProvider
 
         return false;
     }
+
 }
