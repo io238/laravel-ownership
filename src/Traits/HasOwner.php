@@ -22,7 +22,9 @@ trait HasOwner {
         $this->hidden[] = 'user_id';
 
         // Set Auth::user() as default user ID
-        $this->user_id = Auth::user()->id ?? null;
+        if (Auth::check()){
+            $this->user_id = Auth::user()->id;
+        }
     }
 
 
