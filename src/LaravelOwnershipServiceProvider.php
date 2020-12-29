@@ -2,6 +2,7 @@
 
 namespace Io238\LaravelOwnership;
 
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\ServiceProvider;
 
 
@@ -25,6 +26,11 @@ class LaravelOwnershipServiceProvider extends ServiceProvider {
                 ], 'migrations');
             }
         }
+
+
+        Blueprint::macro('owner', function (){
+            $this->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+        });
 
     }
 
