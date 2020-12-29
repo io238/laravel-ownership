@@ -39,4 +39,9 @@ trait HasOwner {
         return $this->belongsTo(config('laravel-ownership.model'));
     }
 
+    public function scopeOwnedBy($query, $user)
+    {
+        return $query->withoutGlobalScopes()->where('user_id', $user->id);
+    }
+
 }
